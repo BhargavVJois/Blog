@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV: Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="scrollStatus" class="scroll__status"></div>
+    <header>
+        <h1 class="heading">BV / blog</h1>
+        <nav>
+            <ul>
+                <li><a href="https://bhargavvjois.github.io/Portfolio/#aboutme">&#x2022;. About me</a></li>
+                <li><a href="https://bhargavvjois.github.io/Portfolio/#projects">&#x2022;. Projects</a></li>
+                <li><a href="https://bhargavvjois.github.io/Portfolio/#connect">&#x2022;. Connect</a></li>
+                <li class="only__mbl"><a href="https://bhargavvjois.github.io/Portfolio/">&#x2022;. Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="blog__nav">
+        <p><a href="#">Archive</a></p>
+        <p><a href="#">Popular</a></p>
+        <p class="cate_nav"><a href="#">Categories</a></p>
+        <p><a href="#">Search &#128269;</a></p>
+    </div>
+    <article>
+        <div class="post" onclick="goToPage()">
+            <div class="post__number_div">
+                <h1 class="post__number">01.</h1>
+            </div>
+            <div class="post__info">
+                <p class="cate">&#128278; Python</p>
+                <h2 class="article__heading">The new technologicol revolution: Exploration.</h2>
+                <p class="article__desc">It is a long established fact that a reader will be distracted
+                    by the readable content of a page when looking at its layout. The point of using Lorem
+                    Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                    content here', making it look like readable English. Many desktop publishing packages and web page editors
+                    now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+                    sites still in their infancy. Various versions have evolved over the years, sometimes by accident,
+                    sometimes on purpose (injected humour and the like).
+                </p>
+                <p class="stat"> &#8600; Bhargav on 25 May 2024</p>
+            </div>
+        </div>
+
+        <div class="post"  onclick="goToPage()">
+            <div class="post__number_div">
+                <h1 class="post__number">02.</h1>
+            </div>
+            <div class="post__info">
+                <p class="cate">&#128278; Internet</p>
+                <h2 class="article__heading">The new technologicol revolution: Exploration.</h2>
+                <p class="article__desc">It is a long established fact that a reader will be distracted
+                    by the readable content of a page when looking at its layout. The point of using Lorem
+                    Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                    content here', making it look like readable English. Many desktop publishing packages and web page editors
+                    now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+                    sites still in their infancy. Various versions have evolved over the years, sometimes by accident,
+                    sometimes on purpose (injected humour and the like).
+                </p>
+                <p class="stat"> &#8600; Bhargav on 25 May 2024</p>
+            </div>
+        </div>
+
+        <div class="post"  onclick="goToPage()">
+            <div class="post__number_div">
+                <h1 class="post__number">03.</h1>
+            </div>
+            <div class="post__info">
+                <p class="cate">&#128278; Javascript</p>
+                <h2 class="article__heading">The new technologicol revolution: Exploration.</h2>
+                <p class="article__desc">It is a long established fact that a reader will be distracted
+                    by the readable content of a page when looking at its layout. The point of using Lorem
+                    Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                    content here', making it look like readable English. Many desktop publishing packages and web page editors
+                    now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+                    sites still in their infancy. Various versions have evolved over the years, sometimes by accident,
+                    sometimes on purpose (injected humour and the like).
+                </p>
+                <p class="stat"> &#8600; Bhargav on 25 May 2024</p>
+            </div>
+        </div>
+
+        <div class="post"  onclick="goToPage()">
+            <div class="post__number_div">
+                <h1 class="post__number">04.</h1>
+            </div>
+            <div class="post__info">
+                <p class="cate">&#128278; Data Structures And Algorithms</p>
+                <h2 class="article__heading">The new technologicol revolution: Exploration.</h2>
+                <p class="article__desc">It is a long established fact that a reader will be distracted
+                    by the readable content of a page when looking at its layout. The point of using Lorem
+                    Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                    content here', making it look like readable English. Many desktop publishing packages and web page editors
+                    now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+                    sites still in their infancy. Various versions have evolved over the years, sometimes by accident,
+                    sometimes on purpose (injected humour and the like).
+                </p>
+                <p class="stat"> &#8600; Bhargav on 25 May 2024</p>
+            </div>
+        </div>
+    </article>
+    <section class="pages">
+        <button class="first"> &#8676;</button>
+        <button class="previous">&#11164;</button>
+        <button class="curr">1</button>
+        <button class="next">&#11166;</button>
+        <button class="last">&#8677;</button>
+    </section>
+    <footer>
+        <p>&copy;Bhargav V, 2024</p>
+        <p>
+            <a href="https://bhargavvjois.github.io/Portfolio/#aboutme"> About me </a>
+            <span>&#x2022;</span>
+            <a href="https://bhargavvjois.github.io/Portfolio/#projects"> Projects </a>
+            <span>&#x2022;</span>
+            <a href="https://bhargavvjois.github.io/Portfolio/#connect"> Connect </a>
+        </p>
+    </footer>
+    <script>
+        window.onscroll = (ev) => {
+            console.log("scrolled");
+            const widthOfStatus = document.documentElement.scrollTop / (document.body.clientHeight - window.innerHeight) * 100;
+            document.getElementById("scrollStatus").animate(
+                {
+                    width: widthOfStatus + 'vw'
+                }, {duration: 100, fill: 'forwards'}
+            )
+        }
+
+        function goToPage(){
+            location.href = "file:///C:/Users/my%20pc/Desktop/blog/blog/post_detail.html#";
+        }
+    </script>
+</body>
+</html>

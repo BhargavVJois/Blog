@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The new technologicol revolution: Exploration.</title>
+    <link rel="stylesheet" href="styles_post_detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="scrollStatus" class="scroll__status"></div>
+    <div class="fixed_options">
+        <button type="button" id="dark_light"  onclick="toggleTheme()">
+            <img src="download.png" id="dark" alt="Dark Mode" width="100%" height="100%"/>
+            <img src="light.png" id="light" alt="Light Mode" width="100%" height="100%"/>
+        </button>
+        <button type="button" id="top">
+            <img src="back.png" alt="Dark Mode" width="100%" height="100%"/>
+        </button>
+    </div>
+    <header>
+        <a href="index.html">BV / blog</a>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="index.html">Popular</a>
+            <a href="index.html">Explore</a>
+        </div>
+    </header>
+    <div class="article">
+        <p class="cate">Python</p>
+        <h1 class="title">The new technologicol revolution: Exploration.</h1>
+        <p class="stat">&#8600; Bhargav on 25 May 2024</p>
+        <p class="post_desc">
+            It is a long established fact that a reader will be distracted
+            by the readable content of a page when looking at its layout. The point of using Lorem
+            Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+            content here', making it look like readable English. Many desktop publishing packages and web page editors
+            now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various versions have evolved over the years, sometimes by accident,
+            sometimes on purpose (injected humour and the like).
+        </p>
+    </div>
+    
+    <script>
+        let previousScrollPos = 0;
+        let currentTheme = 0;
+
+        const handleScroll = function() {
+            window.addEventListener('scroll', function() {
+            const currentScrollPos = window.scrollY;
+
+            const widthOfStatus = document.documentElement.scrollTop / (document.body.clientHeight - window.innerHeight) * 100;
+            document.getElementById("scrollStatus").animate(
+                {
+                    width: widthOfStatus + 'vw'
+                }, {duration: 100, fill: 'forwards'}
+            )
+
+            if (currentScrollPos < 100){
+                document.getElementById("dark_light").animate(
+                    {
+                        right: 2 + '%'
+                    }, {duration: 500, fill: 'forwards'}
+                )
+                document.getElementById("dark_light").style.pointerEvents = "auto";
+
+            } else {
+                document.getElementById("dark_light").animate(
+                    {
+                        right: -5 + 'em'
+                    }, {duration: 500, fill: 'forwards'}
+                )
+                document.getElementById("dark_light").style.pointerEvents = "none";
+            }
+
+            if (previousScrollPos > currentScrollPos) {
+                if (previousScrollPos - currentScrollPos > 1){
+                    showHideTopButton(1);
+                }
+            } else if (previousScrollPos < currentScrollPos) {
+                if (previousScrollPos - currentScrollPos < -1){
+                    showHideTopButton(0);
+                }
+            }
+
+            previousScrollPos = currentScrollPos;
+            });
+        };
+
+        handleScroll();
+
+        function showHideTopButton(pos){
+            if ((document.getElementById("top").style.display == "block" || document.getElementById("top").style.display == "") 
+                    && pos === 0){
+                document.getElementById("top").animate(
+                    {
+                        right: -5 + 'em'
+                    }, {duration: 500, fill: 'forwards'}
+                )
+                document.getElementById("top").style.pointerEvents = "none";
+            }
+            else if ((document.getElementById("top").style.display == "none" || document.getElementById("top").style.display == "")
+                         && pos === 1){
+                document.getElementById("top").animate(
+                    {
+                        right: 2 + '%'
+                    }, {duration: 500, fill: 'forwards'}
+                )
+                document.getElementById("top").style.pointerEvents = "auto";
+            }
+        }
+
+        function toggleTheme(){
+            if (currentTheme === 0){
+                document.documentElement.style.setProperty('--bg-color', '#cccccc');
+                document.documentElement.style.setProperty('--color', '#121212');
+                document.documentElement.style.setProperty('--extra-color', '#aaaaaa');
+                document.documentElement.style.setProperty('--lg-color', 'rgba(0, 0, 0, 0.06)');
+                document.getElementById("dark").style.display = "none";
+                currentTheme = 1;
+            }
+            else if (currentTheme === 1){
+                document.documentElement.style.setProperty('--bg-color', '#121212');
+                document.documentElement.style.setProperty('--color', 'bisque');
+                document.documentElement.style.setProperty('--extra-color', '#313131');
+                document.documentElement.style.setProperty('--lg-color', 'rgba(128, 128, 128, 0.06)');
+                document.getElementById("dark").style.display = "block";
+                currentTheme = 0;
+            }
+        }
+    </script>
+</body>
+</html>
